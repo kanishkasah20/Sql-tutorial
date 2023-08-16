@@ -1,0 +1,16 @@
+create table cust(
+ customer_id int8 PRIMARY KEY,
+	first_name varchar(50),
+	last_name varchar(50),
+	email varchar(100),
+	address_id int8
+  	
+)
+
+select * from cust;
+
+//importing csv file in PostgreSQL
+COPY cust(customer_id,first_name,last_name,email,address_id)
+FROM 'C:\customer.csv'
+DELIMITER ','
+CSV HEADER;
